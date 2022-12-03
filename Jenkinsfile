@@ -1,5 +1,6 @@
 pipeline {
-  agent { docker { image 'python:3.10.0' } }
+  agent { docker { image 'python' } }
+  stages{
     stages("build"){
       steps{
         sh 'pip install flask'
@@ -16,3 +17,4 @@ pipeline {
       }
     }
   }
+}
